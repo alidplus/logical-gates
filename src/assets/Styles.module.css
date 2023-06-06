@@ -1,0 +1,56 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.group {
+  margin-bottom: 1px;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+.control {
+  width: 200px;
+  height: 20px;
+}
+.removeBtn {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+.addBtn {
+  height: 20px;
+  width: 200px;
+  align-self: flex-start;
+  padding: 0 20px;
+  text-align: center;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.indent {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 1px solid lightgray;
+  position: relative;
+}
+.indent[data-label]::before {
+  content: attr(data-label);
+  position: absolute;
+  left: -30px;
+  width: 25px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  display: inline-block;
+  height: 20px;
+  color: gray;
+  text-align: right;
+}
+.result {
+  margin-top: 10px;
+  font-weight: 700;
+}
